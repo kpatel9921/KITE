@@ -5,11 +5,21 @@ KITE (Knowledge-Integrated Text–Image Encoder) is an end-to-end framework for 
 
 	•	Tri-modal Fusion
 Integrates text, image, and knowledge representations within a unified Transformer layer.
+
+
+
 	•	Knowledge-Aware Encoding
 Builds per-article mini-knowledge graphs from Wikidata and encodes them via a two-layer GAT.
+
+
+
 	•	End-to-End Fine-tuning
 Selectively unfreezes the last layers of RoBERTa and CLIP for domain adaptation.
+
+
 	•	Per-Modality Confidence Scores
 Outputs text, image, and knowledge confidence alongside the final real/fake prediction for interpretability.
+
+
 	•	Focal Loss & Threshold Tuning
 Uses focal loss for imbalanced data and data-driven threshold selection to maximize F1 score.
