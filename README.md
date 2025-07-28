@@ -23,5 +23,7 @@ INSTALLATION
 ```git clone https://github.com/<your-username>/KITE.git```
 
 Create a virtual environment
+
 ```python3 -m venv venv```
+
 ```source venv/bin/activate```
