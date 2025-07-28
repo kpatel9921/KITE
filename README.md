@@ -17,3 +17,6 @@ KITE (Knowledge-Integrated Text–Image Encoder) is an end-to-end framework for 
 
 	• Focal Loss & Threshold Tuning
 	Uses focal loss for imbalanced data and data-driven threshold selection to maximize F1 score.
+
+INSTALLATION
+```git clone https://github.com/<your-username>/KITE.git```
