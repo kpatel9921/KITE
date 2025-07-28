@@ -40,14 +40,58 @@ DATA PREPARATION
 1. Follow instructions at: https://github.com/KaiDMML/FakeNewsNet/
 
 2. Organize under data/gossipcop/ and data/politifact/ as:
-   
+ ```  
 data/fakenewsnet_dataset/
-
 ├── gossipcop/real/
-
 ├── gossipcop/fake/
-
 ├── politifact/real/
-
 └── politifact/fake/
+```
+3. Run Collection Script
+
+```python src/data_collection.py --root data/fakenewsnet_dataset --output data/processed_samples.json```
+
+
+
+TRAIN AND VALIDATE
+
+
+```
+ python src/train.py \
+  --train_split GossipCop \
+  --val_split Politifact \
+  --epochs 10 --batch_size 32 --lr 1e-4
+```
+
+Evaluate & print confidences
+
+```
+python src/evaluate.py \
+  --checkpoint best_GossipCop.pt \
+  --test_split GossipCop
+```
+
+RESULTS
+After training you should see output similar to: 
+
+```📊 Final PolitiFact Results:
+✅ Accuracy:             0.8681
+🎯 F1 Score:             0.8894
+🔍 Precision:            0.9345
+📥 Recall:               0.8788
+
+📖 Avg Text Confidence:  0.5630
+🖼️ Avg Image Confidence: 0.5058
+📚 Avg KG Confidence:    0.4931
+
+📊 Final GossipCop Results:
+✅ Accuracy:             0.8851
+🎯 F1 Score:             0.9297
+🔍 Precision:            0.9265
+📥 Recall:               0.9592
+
+📖 Avg Text Confidence:  0.4319
+🖼️ Avg Image Confidence: 0.4414
+📚 Avg KG Confidence:    0.4933
+```
 
