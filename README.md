@@ -33,3 +33,16 @@ Install dependencies
 ```pip install -r requirements.txt```
 
 ```python -m spacy download en_core_web_sm```
+
+
+DATA PREPARATION
+
+1. Follow instructions at: https://github.com/KaiDMML/FakeNewsNet/
+
+2. Organize under data/gossipcop/ and data/politifact/ as:
+data/fakenewsnet_dataset/
+├── gossipcop/real/
+├── gossipcop/fake/
+├── politifact/real/
+└── politifact/fake/
+
