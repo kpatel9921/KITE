@@ -45,9 +45,9 @@ data/fakenewsnet_dataset/
 ├── politifact/real/
 └── politifact/fake/
 ```
-3. Run Collection Script
+3. Run Collection Script (provided in FakeNewsNet GitHub)
 
-```python src/data_collection.py --root data/fakenewsnet_dataset --output data/processed_samples.json```
+```python src/news_content_collection.py --root data/fakenewsnet_dataset --output data/processed_samples.json```
 
 
 
