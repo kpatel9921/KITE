@@ -18,6 +18,7 @@ KITE (Knowledge-Integrated Text–Image Encoder) is an end-to-end framework for 
 	• Focal Loss & Threshold Tuning
 	Uses focal loss for imbalanced data and data-driven threshold selection to maximize F1 score.
 
+  
 INSTALLATION
 
 ```git clone https://github.com/<your-username>/KITE.git```
@@ -33,6 +34,7 @@ Install dependencies
 ```pip install -r requirements.txt```
 
 
+    
 DATA PREPARATION
 
 1. Follow instructions at: https://github.com/KaiDMML/FakeNewsNet/
@@ -51,25 +53,18 @@ data/fakenewsnet_dataset/
 
 
 
-TRAIN AND VALIDATE
+LAUNCH THE NOTEBOOK
 
 
-```
- python src/train.py \
-  --train_split GossipCop \
-  --val_split Politifact \
-  --epochs 10 --batch_size 32 --lr 1e-4
-```
 
-Evaluate & print confidences
+ ```jupyter lab``` (in terminal) and run all cells TOP to BOTTOM
 
-```
-python src/evaluate.py \
-  --checkpoint best_GossipCop.pt \
-  --test_split GossipCop
-```
 
-RESULTS
+
+
+
+RESULTS    
+  
 After training you should see output similar to: 
 
 ```📊 Final PolitiFact Results:
