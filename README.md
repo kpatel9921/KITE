@@ -67,7 +67,8 @@ RESULTS
   
 After training you should see output similar to: 
 
-```📊 Final PolitiFact Results:
+```
+📊 Final PolitiFact Results:
 ✅ Accuracy:             0.8681
 🎯 F1 Score:             0.8894
 🔍 Precision:            0.9345
